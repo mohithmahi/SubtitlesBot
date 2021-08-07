@@ -13,7 +13,7 @@ from telegram import (
 from telegram.ext import CallbackContext
 
 def start(update: Update, context: CallbackContext):
-    context.bot.send_message(chat_id=update.effective_chat.id, text=f"<b>Hi {update.effective_user.first_name}!\n\nI am subtitle downloader bot. I can provide movie subtitles.\n\n==> Just send me Movie or Series name. Use @imdb or @imdbot inline to get currect movie name.\n\nSubscribe ℹ️ @sbbotzz if you ❤️ using this bot!\n\nMade By @mohithmahesh😍</b>", parse_mode="Markdown")
+    context.bot.send_message(chat_id=update.effective_chat.id, text=f"<b>Hi {update.effective_user.first_name}!\n\nI am subtitle downloader bot. I can provide movie subtitles.\n\n<b>==> Just send me Movie or Series name</b>.<b>Use @imdb or Google inline to get currect movie name.</b>\n\n<b>Subscribe ℹ️ @sbbotzz if you ❤️ using this bot!</b>\n\n<b>Made By @mohithmahesh😍</b>", parse_mode="Markdown")
 def searching(update: Update, context: CallbackContext):
     if update.message.via_bot != None:
         return
